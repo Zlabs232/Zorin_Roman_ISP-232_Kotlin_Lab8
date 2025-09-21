@@ -30,5 +30,12 @@ class GuildHero {
 //
 //    val quest = Quest("Побег из замка", 5,700,"Сложный")
 
+    val escortQuest = Quest(
+        title = "Сопроводи торговца до деревни",
+        4,
+        120,
+        "Средний",
+        questType = QuestType.ESCORT
+    )
 
 }
