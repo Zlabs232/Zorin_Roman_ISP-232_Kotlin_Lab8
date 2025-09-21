@@ -2,22 +2,20 @@ package files
 import java.io.File
 
 fun main() {
-    val file = File("demo.txt")
+    val file = File("toDo.txt")
+    println("Добро пожаловать в ToDo приложение!")
 
-    println("Создаём или перезаписываем файл...")
-    file.writeText("Привет!\n")
-    println("Текущее содержимое файла:")
-    println(file.readText())
-
-    println("Добавим новую строку с помощью appendText...")
-    file.appendText("Это новая строка!\n")
-    println("Строка добавлена.")
-    println("Текущее содержимое файла:")
-    println(file.readText())
-
-    println("Прочитаем файл построчно (readLines):")
-    val lines = file.readLines()
-    for ((index, line) in lines.withIndex()) {
-        println("${index + 1}: $line")
+    while(true) {
+        print("Введите задачу (или 0 для выхода): ")
+        val userInput = readln()
+        if (userInput == "0")
+            break
+        else{
+            file.appendText("$userInput\n")
+            println("Задача сохранена!")
+        }
     }
+
+    println("\nВаш список задач: ")
+    println(file.readText())
 }
