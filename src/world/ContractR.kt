@@ -21,7 +21,7 @@ fun main() {
 //    contract2.printContractInfo()
 
     val missions = listOf(
-        Quest("Охота на монстров", 5, 600, "Средний"),
+//        Quest("Охота на монстров", 5, 600, "Средний"),
         SpecialOperation("Ночной рейд", 1500, 2, true),
         Contract("Доставка груза", "Гильдия Торговцев", "Доставить груз через лес", 800, true)
     )
